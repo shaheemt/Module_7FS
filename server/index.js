@@ -5,6 +5,7 @@ const cors = require('cors')
 const path = require("path");
 PORT = 4000
 const mongoose = require("mongoose")
+const cookieParser = require('cookie-parser')
 
 mongoose.connect("mongodb://127.0.0.1:27017/userModel")
 .then((data)=>{
@@ -21,6 +22,8 @@ dotenv.config({path:"./Config/config.env"});
 
 app.use(express.json())
 app.use('/', router)
+app.use(cookieParser())
+app.use(express.urlencoded({extented:false}))
 
 app.listen(PORT ,()=> {
     console.log(`server runing on port ${process.env.PORT}`);

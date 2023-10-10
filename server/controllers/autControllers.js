@@ -1,5 +1,7 @@
 const userModel = require("../model/db")
 const {hashPassword, comparePassword} = require('../hashpas/auth')
+const jwt = require('jsonwebtoken')
+const dotenv = require('dotenv')
 
 const test = (req,res) =>{
     res.json('text is working')
@@ -54,7 +56,9 @@ const loginUser = async (req,res) =>{
         
         const pass = await comparePassword(password, user.password)
         if(pass){
-          res.json("password match")
+           jwt.sign({email: user.email, id: user.id, name: user.name}, process.env.JWT_SECRET,{},(err,token)=>{
+            res.cookie('token', token).json(user)
+           })
         }else if(!pass){
             res.json({
                 error:"password do not match"
@@ -64,12 +68,10 @@ const loginUser = async (req,res) =>{
     } catch (error) {
         console.log(error);
     }
-   
-    
 }
 
 module.exports = {
     test,
     register,
-    loginUser
+    loginUser,
 }
