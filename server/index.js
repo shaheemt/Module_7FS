@@ -6,6 +6,7 @@ const path = require("path");
 PORT = 4000
 const mongoose = require("mongoose")
 const cookieParser = require('cookie-parser')
+const router = require('./routes/autRoutes')
 
 mongoose.connect("mongodb://127.0.0.1:27017/userModel")
 .then((data)=>{
@@ -16,7 +17,7 @@ mongoose.connect("mongodb://127.0.0.1:27017/userModel")
 
 
 // const userModel = require("./model/db")
-const router = require('./routes/autRoutes')
+
 
 dotenv.config({path:"./Config/config.env"});
 

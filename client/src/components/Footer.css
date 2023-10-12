@@ -1,0 +1,104 @@
+.footer{
+    padding: 100px 0;
+    background: #211e39;
+    width: 100%;
+  }.footer-section-logo{
+    text-align: center;
+    margin-bottom: 20px;
+  }.footer-section-logo img {
+    margin: 0 auto;
+    width: 130px;
+  }.footer-content{
+    height: 10rem;
+  }.copy-right-content{
+    text-align: center;
+    border-top: 1px solid #38354d;
+  }.footerSection p{
+    font-size: 14px;
+    color: #9692b0;
+    padding-top: 26px;
+    font-family: 'Lato', sans-serif;
+  }.footerCircles{
+    width: 100%;
+    display: flex;
+    margin-bottom: 5rem;
+    list-style: none;
+    justify-content: center;
+  }.footerCircles li{
+    width: 50px;
+    height: 50px;
+    font-size: 1.8rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 10px;
+    transition: all 0.5s linear;
+    cursor: pointer;
+  }.footerCircles li:nth-child(1){
+    color:#0165E1;
+    background-color: #fff;
+  }.footerCircles li:nth-child(1):hover{
+    color:#fff;
+    background-color: #0165E1;
+  }
+  .footerCircles li:nth-child(2){
+    color:#1DA1F2;
+    background-color: #fff;
+  }.footerCircles li:nth-child(2):hover{
+    color:#fff;
+    background-color: #1DA1F2;
+  }
+  .footerCircles li:nth-child(3){
+    color:#cd486b;
+    background-color: #fff;
+  }.footerCircles li:nth-child(3):hover{
+    color:#fff;
+    background-color: #cd486b;
+  }
+  .footerCircles li:nth-child(4){
+    color:#c8232c;
+    background-color: #fff;
+  }.footerCircles li:nth-child(4):hover{
+    color:#fff;
+    background-color: #c8232c;
+  }.toggle{
+    position: fixed;
+    top: 20px;
+    right:25px;
+    background: #6f34fe;
+    color:#fff;
+    width:50px;
+    height:50px;
+    border-radius: 50%;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  @media (max-width:765px){
+    .container{
+      width: 100%;
+      padding: 0 30px;
+    }.col-6{
+      width: 100%;
+      display: flex;
+      align-items: center;
+    }.navbar{
+      width: 100%;
+    }.navbar__right{
+      flex-direction: column;
+      width: 100%;
+      align-items: center;
+      background: #b7e1e4;
+      position: fixed;
+      top: 0;
+      left: 0;
+    }.navbar__right li{
+      display: block;
+      padding: 20px 0;
+      font-size: 15px;
+    }.toggle{
+      display:flex;
+    }
+  }

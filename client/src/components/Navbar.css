@@ -1,0 +1,32 @@
+
+.navbar{
+    width: 100%;
+    height: 100px;
+    /* position: fixed; */
+    top: 0;
+    background: linear-gradient(33deg,rgba(242,242,255,1)0%, rgba(235,249,255,1)100%);
+  }.navbar__container{
+    display: flex;
+    height: 100px;
+    align-items:center;
+    justify-content: space-between;
+  }.navbar__left-logo img{
+    width:80px;
+    height: 50px;
+    padding-left: 15px;
+  }.navbar__right{
+    display: flex;
+    list-style-type: none;
+  }.navbar__right li{
+    text-decoration: none;
+    color:#6f34fe;
+    font-weight: 450;
+    font-size: 30px;
+    padding: 10px 15px;
+    
+  }.navbar__right li:hover{
+    color:rgb(172, 172, 32)
+  }.toggle{
+    display: none;
+  }
+  
